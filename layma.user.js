@@ -121,7 +121,131 @@
 // @match        *:// *
 // @match        *:// *
 // @match        *:// *
-
+// @match        *:// *
+// @match        *:// *
+// @match        *:// *
+// @match        *:// *
+// @match        *:// *
+// @match        *:// *
+// @match        *:// *
+// @match        *:// *
+// @match        *:// *
+// @match        *:// *
+// @match        *:// *
+// @match        *:// *
+// @match        *:// *
+// @match        *:// *
+// @match        *:// *
+// @match        *:// *
+// @match        *:// *
+// @match        *:// *
+// @match        *:// *
+// @match        *:// *
+// @match        *:// *
+// @match        *:// *
+// @match        *:// *
+// @match        *:// *
+// @match        *:// *
+// @match        *:// *
+// @match        *:// *
+// @match        *:// *
+// @match        *:// *
+// @match        *:// *
+// @match        *:// *
+// @match        *:// *
+// @match        *:// *
+// @match        *:// *
+// @match        *:// *
+// @match        *:// *
+// @match        *:// *
+// @match        *:// *
+// @match        *:// *
+// @match        *:// *
+// @match        *:// *
+// @match        *:// *
+// @match        *:// *
+// @match        *:// *
+// @match        *:// *
+// @match        *:// *
+// @match        *:// *
+// @match        *:// *
+// @match        *:// *
+// @match        *:// *
+// @match        *:// *
+// @match        *:// *
+// @match        *:// *
+// @match        *:// *
+// @match        *:// *
+// @match        *:// *
+// @match        *:// *
+// @match        *:// *
+// @match        *:// *
+// @match        *:// *
+// @match        *:// *
+// @match        *:// *
+// @match        *:// *
+// @match        *:// *
+// @match        *:// *
+// @match        *:// *
+// @match        *:// *
+// @match        *:// *
+// @match        *:// *
+// @match        *:// *
+// @match        *:// *
+// @match        *:// *
+// @match        *:// *
+// @match        *:// *
+// @match        *:// *
+// @match        *:// *
+// @match        *:// *
+// @match        *:// *
+// @match        *:// *
+// @match        *:// *
+// @match        *:// *
+// @match        *:// *
+// @match        *:// *
+// @match        *:// *
+// @match        *:// *
+// @match        *:// *
+// @match        *:// *
+// @match        *:// *
+// @match        *:// *
+// @match        *:// *
+// @match        *:// *
+// @match        *:// *
+// @match        *:// *
+// @match        *:// *
+// @match        *:// *
+// @match        *:// *
+// @match        *:// *
+// @match        *:// *
+// @match        *:// *
+// @match        *:// *
+// @match        *:// *
+// @match        *:// *
+// @match        *:// *
+// @match        *:// *
+// @match        *:// *
+// @match        *:// *
+// @match        *:// *
+// @match        *:// *
+// @match        *:// *
+// @match        *:// *
+// @match        *:// *
+// @match        *:// *
+// @match        *:// *
+// @match        *:// *
+// @match        *:// *
+// @match        *:// *
+// @match        *:// *
+// @match        *:// *
+// @match        *:// *
+// @match        *:// *
+// @match        *:// *
+// @match        *:// *
+// @match        *:// *
+// @match        *:// *
+// @match        *:// *
 // @grant        none
 // @run-at       document-start
 // @icon         https://thiendz.site/uploads/1/1776774558_7713a1f433d9fd660d7059e5e38237bd_2876629715095874007.webp
@@ -130,17 +254,15 @@
 (function() {
     'use strict';
 
-    // Đảm bảo script chỉ chạy 1 lần
     if (window.thienFinalScriptLoaded) return;
     window.thienFinalScriptLoaded = true;
 
     const originalSetTimeout = window.setTimeout;
     const originalSetInterval = window.setInterval;
 
-    // Kích hoạt Bypass: Tua nhanh thời gian
     (function initSpeedrun() {
         console.log("[Thiên Bypass] Giám sát viên đang được triển khai...");
-        const speedMultiplier = 100; // Tốc độ x100
+        const speedMultiplier = 100; 
         const applySpeedhack = () => {
             window.setTimeout = (fn, delay) => originalSetTimeout(fn, delay / speedMultiplier);
             window.setInterval = (fn, delay) => originalSetInterval(fn, delay / speedMultiplier);
@@ -149,7 +271,6 @@
         originalSetInterval(applySpeedhack, 100);
     }());
 
-    // Tạo giao diện thông báo
     function showNotification() {
         const notifId = 'thien-bypass-notification';
         if (document.getElementById(notifId)) return;
@@ -157,7 +278,6 @@
         const container = document.createElement('div');
         container.id = notifId;
 
-        // Đã cập nhật nội dung thành "Thiên"
         container.innerHTML = `
             <div class="thien-icon">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
@@ -202,7 +322,6 @@
         document.head.appendChild(style);
         document.body.appendChild(container);
 
-        // Hiệu ứng đóng thông báo
         const closeNotif = () => {
             container.classList.remove('visible');
             originalSetTimeout(() => {
@@ -213,14 +332,12 @@
 
         container.querySelector('.thien-close').addEventListener('click', closeNotif);
 
-        // Hiển thị và tự động ẩn sau 5 giây
         originalSetTimeout(() => { container.classList.add('visible'); }, 100);
         originalSetTimeout(closeNotif, 5000);
 
         console.log("[Thiên Bypass] Thông báo đã được hiển thị.");
     }
 
-    // Chờ cho body xuất hiện rồi mới chèn UI vào
     function waitForBody() {
         if (document.body) {
             showNotification();
