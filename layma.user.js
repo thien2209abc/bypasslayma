@@ -2,9 +2,9 @@
 // @name            Auto Get Code LayMa
 // @namespace       http://tampermonkey.net/
 // @version         1.0.2
-// @description     Công cụ tự động lấy mã LayMa gọn nhẹ (Chỉ bật/tắt, không hiện đồng hồ Captcha)
+// @description     Công cụ tự động lấy mã LayMa 
 // @author          Thiên Đz
-// @icon           https://thiendz.site/uploads/1/1784563166_Gemini_Generated_Image_ikwpibikwpibikwp.webp
+// @icon            https://thiendz.site/uploads/1/1784563166_Gemini_Generated_Image_ikwpibikwpibikwp.webp
 // @match           *://*/*
 // @grant           GM_setValue
 // @grant           GM_getValue
